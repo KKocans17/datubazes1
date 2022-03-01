@@ -1,7 +1,7 @@
 #include <iostream>
+#include <fstream>
 #include <ctime>
-#include <stdlib.h>
-#include <string>
+#include <stdio.h>
 using namespace std;
 
 int main()
@@ -10,83 +10,182 @@ int main()
 
     string vardi[8];
     string uzvardi[8];
+    string Produkts[8];
     int a = 0;
     int b = 0;
     int c = 0;
     int reizes = 0;
-    int ID = 1;
+    int ID = 0;
+
     cout << "Ludzu ievadiet personu vardus" << endl;
     for(int i = 0; i < 8; i++)
-    {
-         cout <<"Personas :" << i << endl;
-         cin >> vardi[i];
-    }
+        {
+            cout <<"Personas:" << i << endl;
+            cin >> vardi[i];
+        }
     cout << endl;
-    cout << endl;
+
     for(int i = 0; i < 8; i++)
-    {
-       cout << vardi[i] << endl;
-    }
+        {
+            cout << vardi[i] << endl;
+        }
     cout << endl;
-cout << endl;
 
     cout << "Ludzu ievadiet personu uzvardus" << endl;
+
     for(int i = 0; i < 8; i++)
-    {
-         cout <<"Personas :" << i << endl;
-         cin >> uzvardi[i];
-    }
+        {
+            cout <<"Personas:" << i << endl;
+            cin >> uzvardi[i];
+        }
     cout << endl;
-    cout << endl;
+
     for(int i = 0; i < 8; i++)
-    {
-       cout << uzvardi[i] << endl;
-    }
+        {
+            cout << uzvardi[i] << endl;
+        }
     cout << endl;
-cout << endl;
+
+     cout << "Ludzu ievadiet produktus" << endl;
+
+    for(int i = 0; i < 8; i++)
+        {
+            cout <<"Produkti:" << i << endl;
+            cin >> Produkts[i];
+        }
+    cout << endl;
+
+    for(int i = 0; i < 8; i++)
+        {
+            cout << Produkts[i] << endl;
+        }
+    cout << endl;
+
 
     cout << "Ievadiet 2D masinu izmerus, robeza no 3 lidz 9" << endl;
     cin >> a;
     cin >> b;
 
+    cout << endl;
+
+    ofstream mans_fails;
+    mans_fails.open("dati.txt",ios::out);
+
+    for(int x = 0; x < a; x++)
+     {
+      if(x == 0)
+          {
+             cout << "ID";
+             cout << " ";
+             mans_fails << "ID ";
+          }
+         if(x == 1)
+             {
+                cout << "Vards";
+                cout << " ";
+                mans_fails << "Vards ";
+             }
+            if(x == 2)
+                {
+                    cout << "Uzvards";
+                    cout << " ";
+                    mans_fails << "Uzvards ";
+                }
+                if(x == 3)
+                    {
+                        cout << "Vecums";
+                        cout << " ";
+                        mans_fails << "Vecums ";
+                    }
+                    if(x == 4)
+                        {
+                            cout << "Tel.nr.";
+                            cout << " ";
+                            mans_fails << "Tel.nr. ";
+                        }
+                        if(x == 5)
+                            {
+                                cout << "Ceka nr.";
+                                cout << " ";
+                                mans_fails << "Ceka nr. ";
+                            }
+                             if(x == 6)
+                            {
+                                cout << "Produkts ";
+                                cout << " ";
+                                mans_fails << "Produkts ";
+                            }
+     }
+    cout << endl;
+    mans_fails << endl;
+
     string Rand_Mas[a][b];
     for(int x = 0; x < a; x++)
-    {
-     for( int y = 0; y < b; y++)
      {
-         if(y == 0) {
-                cout << "  " << ID;
+      for( int y = 0; y < b; y++)
+       {
+        if(y == 0)
+            {
+                ID = ID + 1;
+                cout << ID << " ";
+                mans_fails << ID << " ";
+            }
+         if(y == 1)
+             {
+                Rand_Mas[x][y] = vardi[rand()%8];
+             }
+            if(y == 2)
+                {
+                    Rand_Mas[x][y] = uzvardi[rand()%8];
+                }
+                if(y == 3)
+                    {
+                        Rand_Mas[x][y] = to_string(rand()%108+12);
+                    }
+                    if(y == 4)
+                        {
+                            Rand_Mas[x][y] = "2"+to_string(((rand()%99999)+10000)*99);
+                        }
+                       if(y == 5)
+                           {
+                               Rand_Mas[x][y] = "#00"+to_string(((rand()%9999)+1000)*99);
+                           }
+                             if(y == 6)
+                           {
+                               Rand_Mas[x][y] = Produkts[rand()%8];
+                           }
 
-            Rand_Mas[x][y] = vardi[rand()%8];
-         }
-         if(y == 1) {
 
-            Rand_Mas[x][y] = uzvardi[rand()%8];
-         }
-         if(y == 2) {
+                            mans_fails << Rand_Mas[x][y] << " ";
+                            cout << Rand_Mas[x][y] << " ";
+                        }
+                        cout << '\n';
+                        mans_fails << endl;
+                    }
 
-            Rand_Mas[x][y] = to_string(rand()%108+12);
-         }
-                  if(y == 3) {
+    cout<< endl;
 
-            Rand_Mas[x][y] = "2"+to_string(((rand()%99999)+10000)*99);
+    mans_fails.close();
 
-                  if (y == 5) {
+    cout <<"Ludzu ievadiet skaitli no 0 - 7, lai izveletos konkretu personu" << endl;
+    cin >> c;
 
-
-         }
-        cout <<   Rand_Mas[x][y] << " ";
-     }
-     cout << "" << endl;
-     ID++;
+    for(int i = 0; i < a; i++)
+    {
+        for(int j = 0; j < b; j++)
+        {
+            if(Rand_Mas[i][j] == vardi[c])
+            {
+                reizes = reizes + 1;
+            }
+        }
     }
+    cout << endl;
+    cout << endl;
+    cout << "Persona "<< vardi[c] <<" tika atrasts " << reizes << " reizes " << endl;
 
- cout<< endl;
-
-
-
-
- cout <<"Ludzu ievadiet skaitli no 0 - 7, lai izveletos konkretu personu" << endl;
+    return 0;
 }
-
-// Janis, Roberts, Juris, Karlis, Rainers, Ingolfs, Adolfs, Andris, Andrejs, Nikolajs
+// Edgars Igors Kristaps Rainers Ingolfs Peters Janis Rolands
+// Berzins Abolins Cakars Biezins Alpa Lapa Lietins Janka
+// Kola Piradzini Aboli Makaroni Zupa Saldejums Maize Sula

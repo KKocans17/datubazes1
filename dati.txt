@@ -1,0 +1,10 @@
+ID Vards Uzvards Vecums Tel.nr. Ceka nr. Produkts 
+1  Janis Abolins 69 21270368 #001004157 Maize   
+2  Edgars Alpa 60 23751704 #00934956 Zupa   
+3  Peters Alpa 50 22659338 #00690327 Maize   
+4  Peters Lapa 106 23371148 #00884367 Saldejums   
+5  Rolands Alpa 84 21483218 #001045737 Piradzini   
+6  Peters Lapa 108 22155230 #00982377 Sula   
+7  Kristaps Alpa 78 21429560 #00862983 Piradzini   
+8  Ingolfs Alpa 77 21665675 #00908226 Makaroni   
+9  Janis Berzins 84 22791206 #00968715 Sula   
