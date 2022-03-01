@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1643964022 source:z:\prog_darbi\datubazes_1\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+	<string>
+
