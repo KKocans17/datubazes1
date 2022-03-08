@@ -1,3 +1,8 @@
+// Kârlis Koèâns, 11.g
+// Ðî programma paredz masîvu ìençrçðanu un aizpildîðanu ar datiem, ko lietotâjs ievadîjis.
+// Nelietot negatîvus skaitïus masîva izmçra izvçlei, jo programma nespçs ìenerçt masîvu ar ðadiem skaitïiem.
+// Koda pçdçjâs rindâs ir atstâts "presets" ar kuru var izveidot masîvu âtri un efektîvi.
+
 #include <iostream>
 #include <fstream>
 #include <ctime>
@@ -62,7 +67,7 @@ int main()
     cout << endl;
 
 
-    cout << "Ievadiet 2D masinu izmerus, robeza no 3 lidz 9" << endl;
+    cout << "Ievadiet 2D masivu izmerus, robeza no 3 lidz 9" << endl;
     cin >> a;
     cin >> b;
 
