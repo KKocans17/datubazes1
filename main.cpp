@@ -1,7 +1,7 @@
-// Kârlis Koèâns, 11.g
-// Ðî programma paredz masîvu ìençrçðanu un aizpildîðanu ar datiem, ko lietotâjs ievadîjis.
-// Nelietot negatîvus skaitïus masîva izmçra izvçlei, jo programma nespçs ìenerçt masîvu ar ðadiem skaitïiem.
-// Koda pçdçjâs rindâs ir atstâts "presets" ar kuru var izveidot masîvu âtri un efektîvi.
+// Karlis Kocans, 11.g
+//  Si programma paredz masivu izveidi un to aizpildisanu ar datiem, ko lietotajs ievadijis.
+// Nelietot negativus skaitlus masiva izmera izvelei, jo programma nespes inicializet masivu ar sadiem skaitliem.
+// Koda pedejas rindas ir atstats "presets" ar kuru var izveidot masivu atri un efektivi.
 
 #include <iostream>
 #include <fstream>
